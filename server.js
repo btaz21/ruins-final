@@ -9,6 +9,8 @@ require ('dotenv').config();
 
 
 app.use(cors({
+    origin:['https://ruinfindr.herokuapp.com'],
+    methods:['GET','POST', 'DELETE', 'PUT'],
     credentials: true
 }));
 app.use(express.json());
