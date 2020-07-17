@@ -27,7 +27,7 @@ export default class EditRuins extends Component {
 
   componentDidMount = () => {
     axios.get(
-      "http://localhost:5000" + this.props.location.pathname
+      this.props.location.pathname
     ).then(
       (response) => {
         this.setState({
@@ -70,7 +70,7 @@ export default class EditRuins extends Component {
   setRating = (event) => {
     const rating = parseInt(event.target.id)
     axios.put(
-      "http://localhost:5000/ruins/rating/comments/" + this.props.match.params.id,
+      "/ruins/rating/comments/" + this.props.match.params.id,
       {
         rating: [...this.state.ruin.rating, rating],
         comments: [...this.state.ruin.comments, this.state.comments]

@@ -15,7 +15,7 @@ export default class Navbar extends Component {
   }
   componentDidMount = () => {
     axios.get(
-      "http://localhost:5000/sessions"
+      "/sessions"
     ).then(
       (response) => {
         if (response.data.username) {
@@ -31,7 +31,7 @@ export default class Navbar extends Component {
     console.log(username.value);
     console.log(password.value);
     axios.post(
-      "http://localhost:5000/users", {
+      "/users", {
         username: username.value,
         password: password.value
       }
@@ -56,7 +56,7 @@ export default class Navbar extends Component {
   }
   logout = () => {
     axios.delete(
-      "http://localhost:5000/sessions"
+      "/sessions"
     ).then(
       (response) => {
         this.setState({
@@ -71,7 +71,7 @@ export default class Navbar extends Component {
     event.preventDefault()
     const {username, password} = event.target
     axios.post(
-      "http://localhost:5000/sessions", {
+      "/sessions", {
         username: username.value,
         password: password.value
       }
