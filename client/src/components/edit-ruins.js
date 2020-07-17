@@ -27,7 +27,7 @@ export default class EditRuins extends Component {
 
   componentDidMount = () => {
     axios.get(
-      "http://localhost:5000" + this.props.location.pathname
+      "http://localhost:8000" + this.props.location.pathname
     ).then(
       (response) => {
         this.setState({
@@ -41,7 +41,7 @@ export default class EditRuins extends Component {
   deleteRuin = (event) => {
     if (window.confirm("Are you sure you want to delete this entry?") === true) {
       axios.delete(
-        "http://localhost:5000/ruins/" + event.target.id
+        "http://localhost:8000/ruins/" + event.target.id
       ).then(
         (response) => {
           this.props.history.push('/ruinsgrid')
@@ -70,7 +70,7 @@ export default class EditRuins extends Component {
   setRating = (event) => {
     const rating = parseInt(event.target.id)
     axios.put(
-      "http://localhost:5000/ruins/rating/comments/" + this.props.match.params.id,
+      "http://localhost:8000/ruins/rating/comments/" + this.props.match.params.id,
       {
         rating: [...this.state.ruin.rating, rating],
         comments: [...this.state.ruin.comments, this.state.comments]
