@@ -36,7 +36,7 @@ class AddRuins extends Component {
   createRuin = (event) => {
     event.preventDefault()
     axios.post(
-      "http://localhost:8000/ruins",
+      "http://localhost:5000/ruins",
       {
         name: this.state.name,
         city: this.state.city,
