@@ -22,7 +22,7 @@ export default class EditRuins extends Component {
     dynamicImage: null,
     i: 0,
     rating: null,
-    comments: null
+    comments: null,
   }
 
   componentDidMount = () => {
@@ -77,9 +77,7 @@ export default class EditRuins extends Component {
       }
     ).then(
       (response) => {
-        // console.log(this.props.history);
-        // console.log(window.location);
-        window.location = "https://ruinfindr.herokuapp.com" + this.props.location.pathname
+        window.location.reload(true)
       }
     )
   }

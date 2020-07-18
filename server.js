@@ -41,9 +41,9 @@ app.use('/ruins', ruinsController);
 app.use('/users', usersController);
 app.use('/sessions', sessionsController)
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-// });
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 app.listen(port, () => {
