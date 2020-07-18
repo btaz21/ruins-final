@@ -14,7 +14,7 @@ export default class SeeRuinsGrid extends Component {
     searchableList: [],
   }
   componentDidMount = () => {
-    axios.get("/ruins").then(
+    axios.get("/api/ruins").then(
       (response) => {
         this.setState(
           {
@@ -26,7 +26,7 @@ export default class SeeRuinsGrid extends Component {
     )
   }
   addLike = (event) => {
-    axios.put("/likes/" + event.target.id).then(
+    axios.put("/api/likes/" + event.target.id).then(
       (response) => {
         this.setState({ruins: response.data})
       }
