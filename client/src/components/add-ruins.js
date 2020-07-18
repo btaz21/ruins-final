@@ -23,6 +23,7 @@ class AddRuins extends Component {
     lng: null,
     errorMessage: null,
     ruins: [],
+    errorFiles: null
   }
 
   componentDidMount = () => {

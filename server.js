@@ -13,6 +13,7 @@ app.use(cors({
     methods:['GET','POST', 'DELETE', 'PUT'],
     credentials: true
 }));
+
 app.use(express.json());
 app.use(session({
   secret: process.env.SECRET,
