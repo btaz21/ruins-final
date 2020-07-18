@@ -57,7 +57,7 @@ $lightblue: #367890;
 
 //MAIN
 * {
-  // border: 1px solid gold;
+  border: 1px solid gold;
 }
 
 body {
@@ -457,6 +457,11 @@ input[type=submit] {
   grid-column-gap: 20px;
   justify-content: center;
   padding: 20px;
+}
+
+.grid-nav-container {
+  margin:0;
+  padding:0;
 }
 
 .grid-item {

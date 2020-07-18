@@ -44,7 +44,7 @@ export default class SeeRuinsGrid extends Component {
   }
   render = () => {
     return (
-      <div>
+      <div className="grid-nav-container">
         <Navbar />
         <SearchBar search={this.search}/>
         <GridContainer state={this.state} addLike={this.addLike}/>

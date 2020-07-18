@@ -781,6 +781,10 @@
   border: 1px solid black;
 }
 
+* {
+  border: 1px solid gold;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -1155,6 +1159,11 @@ input[type=submit] {
   grid-column-gap: 20px;
   justify-content: center;
   padding: 20px;
+}
+
+.grid-nav-container {
+  margin: 0;
+  padding: 0;
 }
 
 .grid-item {
