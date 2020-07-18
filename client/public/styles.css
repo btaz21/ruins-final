@@ -793,13 +793,9 @@ body {
 
 input, textarea, button {
   -webkit-appearance: none;
-  /*Safari/Chrome*/
   -moz-appearance: none;
-  /*Firefox*/
   -ms-appearance: none;
-  /*IE*/
   -o-appearance: none;
-  /*Opera*/
   appearance: none;
 }
 

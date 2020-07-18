@@ -77,7 +77,7 @@ export default class EditRuins extends Component {
       }
     ).then(
       (response) => {
-        window.location = this.props.location.pathname
+        window.location.reload()
       }
     )
   }
