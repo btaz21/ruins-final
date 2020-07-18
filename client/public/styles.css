@@ -1114,6 +1114,7 @@ input, textarea, button {
 .error {
   margin-bottom: 15px;
   color: #783333;
+  text-align: center;
 }
 
 #errorFiles {

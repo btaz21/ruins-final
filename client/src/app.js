@@ -13,7 +13,7 @@ class App extends React.Component {
         <Route path="/" exact component={SeeRuins} />
         <Route path="/addruin" component={AddRuins} />
         <Route path="/ruinsgrid" component={SeeRuinsGrid} />
-        <Route path="/ruins/:id" component={EditRuins} />
+        <Route path="/ruins/:id" exact component={EditRuins} />
       </Router>
     );
   }

@@ -77,7 +77,9 @@ export default class EditRuins extends Component {
       }
     ).then(
       (response) => {
-        window.location.reload()
+        // console.log(this.props.location);
+        // console.log(window.location);
+        window.location = window.location.href
       }
     )
   }
