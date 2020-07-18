@@ -3,13 +3,13 @@ const cors = require ('cors');
 const mongoose = require('mongoose');
 const session = require('express-session')
 const app = express();
-// const path = require("path")
+const path = require("path")
 const port = process.env.PORT || 5000;
 require ('dotenv').config();
 
 
 app.use(cors({
-    origin:['https://ruinfindr.herokuapp.com', 'http://localhost:3000' ],
+    origin:['https://ruinfindr.herokuapp.com'],
     methods:['GET','POST', 'DELETE', 'PUT'],
     credentials: true
 }));
@@ -20,7 +20,7 @@ app.use(session({
   resave:false,
   saveUninitialized:false
 }))
-// app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 
@@ -41,9 +41,9 @@ app.use('/ruins', ruinsController);
 app.use('/users', usersController);
 app.use('/sessions', sessionsController)
 
-// app.get("*", (req, res) => {
-//     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-// });
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 
 app.listen(port, () => {

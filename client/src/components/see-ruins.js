@@ -17,7 +17,7 @@ export class SeeRuins extends Component {
   }
 
   componentDidMount = () => {
-    axios.get("http://localhost:5000/ruins").then(
+    axios.get("/ruins").then(
       (response) => {
         this.setState({ruins: response.data})
       }
