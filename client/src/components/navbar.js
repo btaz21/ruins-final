@@ -15,7 +15,7 @@ export default class Navbar extends Component {
   }
   componentDidMount = () => {
     axios.get(
-      "/sessions"
+      "http://localhost:5000/sessions"
     ).then(
       (response) => {
         if (response.data.username) {
@@ -56,7 +56,7 @@ export default class Navbar extends Component {
   }
   logout = () => {
     axios.delete(
-      "/sessions"
+      "http://localhost:5000/sessions"
     ).then(
       (response) => {
         this.setState({
@@ -71,7 +71,7 @@ export default class Navbar extends Component {
     event.preventDefault()
     const {username, password} = event.target
     axios.post(
-      "/sessions", {
+      "http://localhost:5000/sessions", {
         username: username.value,
         password: password.value
       }
@@ -102,8 +102,8 @@ export default class Navbar extends Component {
 
         <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="link logo">
-            <img alt="logo" src="../../images/rocks3.png"/>
             <h1>Ruinfindr</h1>
+            <img alt="logo" src="../../images/rocks3.png"/>
           </div>
         </Link>
 
@@ -111,7 +111,7 @@ export default class Navbar extends Component {
           <Link className="link nav-icons" to={{pathname: "/", state: this.state }}><img alt="" id="map" src="../../images/015.svg"/></Link>
           {this.state.isLoggedIn && <Link className="link nav-icons" to={{pathname: "/addruin", state: this.state }}><img alt="" id="pin" src="../../images/143.svg"/></Link> }
           {this.state.isLoggedIn && <Link className="link nav-icons" to="/ruinsgrid"><img alt="" id="see" src="../../images/327.png"/></Link>}
-          <img onClick={this.toggleLogin} alt="" id="sign-up" src="../../images/163.svg"/>
+          <Link className="link nav-icons"><img onClick={this.toggleLogin} alt="signup-icon" id="sign-up" src="../../images/163.svg"/></Link>
         </div>
 
         {this.state.loginOpen &&

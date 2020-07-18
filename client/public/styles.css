@@ -791,52 +791,71 @@ body {
   color: black;
 }
 
+input, textarea, button {
+  -webkit-appearance: none;
+  /*Safari/Chrome*/
+  -moz-appearance: none;
+  /*Firefox*/
+  -ms-appearance: none;
+  /*IE*/
+  -o-appearance: none;
+  /*Opera*/
+  appearance: none;
+}
+
 .logo {
   font-family: "IM Fell Double Pica SC", serif;
   margin: 10px 15px;
   font-size: 1.1em;
   display: flex;
-  width: 100px;
-}
-
-.logo h1 {
-  align-self: center;
-  margin-left: 10px;
+  flex-direction: column;
 }
 
 .logo img {
-  width: 100%;
-  border-radius: 50%;
+  width: 70px;
+  height: 70px;
   padding: 10px;
+  align-self: center;
+}
+
+.logo h1 {
+  margin: 0;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
+  padding: 0 20px;
 }
 
 .nav-list {
   display: flex;
-  margin-right: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-list img {
+  background-color: whitesmoke;
+  width: 30px;
+  height: 30px;
 }
 
 #map {
   border-radius: 50%;
   border: 1px solid black;
   padding: 12px;
+  align-self: center;
 }
 
 #sign-up {
-  padding: 14px 10px;
-  align-self: center;
+  padding: 12px;
   border-radius: 10px;
   border: 1px solid black;
+  align-items: center;
 }
 
 #see {
-  padding: 7px;
-  width: 40px;
-  align-self: center;
+  padding: 13px;
   border-radius: 50%;
   border: 1px solid black;
 }
@@ -849,11 +868,7 @@ body {
 
 .nav-icons {
   align-self: center;
-  margin-right: 10px;
-}
-
-.nav-icons img {
-  background-color: whitesmoke;
+  margin: 5px;
 }
 
 #nav-user {
@@ -979,7 +994,7 @@ body {
   font-family: "IM Fell Double Pica SC", serif;
   text-align: center;
   border: 1px solid #ccc;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   background: whitesmoke;
   background-image: url(https://i.imgur.com/DXohfqq.jpg);
@@ -1241,7 +1256,7 @@ input[type=submit] {
 .edit-image img {
   width: 100%;
   border-radius: 0 0 80px 80px;
-  height: 650px;
+  height: 700px;
   object-fit: cover;
   object-position: bottom;
 }
@@ -1344,7 +1359,7 @@ input[type=submit] {
 .other-ruins-container h2 {
   margin: 0 auto;
   padding: 10px 0;
-  width: 30%;
+  width: 300px;
   text-align: center;
   border-top: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -1595,6 +1610,26 @@ input[type=submit] {
 
 .flipDown {
   transition: 0.5s;
+}
+
+@media (min-width: 735px) {
+  .other-ruins-container {
+    width: 65%;
+    margin: 100px auto;
+  }
+
+  .entries-container {
+    width: 70%;
+  }
+
+  .content-left {
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .more-images-container {
+    margin-top: 50px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
