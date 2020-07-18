@@ -20,7 +20,8 @@ export default class Navbar extends Component {
       (response) => {
         if (response.data.username) {
           this.setState({
-            isLoggedIn: true
+            isLoggedIn: true,
+            errorMessage: null
         })
       }
     })

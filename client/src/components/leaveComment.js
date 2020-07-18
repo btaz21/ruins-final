@@ -6,7 +6,10 @@ export default class LeaveComment extends Component {
     return (
       <div className="comments-container">
         <div className="comments">
-          <h2>Already visited? Leave an entry</h2>
+            <div className="comments-bar">
+              <h2>Already visited? Leave a review</h2>
+              <h3 onClick={this.props.toggleCommentBox}>x</h3>
+            </div>
           <textarea onKeyUp={this.props.setComments}></textarea>
           <button onClick={this.props.removeComments}>Next</button>
         </div>

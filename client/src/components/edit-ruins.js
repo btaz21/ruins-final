@@ -135,6 +135,7 @@ export default class EditRuins extends Component {
         <LeaveComment
         setComments={this.setComments}
         removeComments={this.removeComments}
+        toggleCommentBox={this.toggleCommentBox}
         />}
         {this.state.ratingBool &&
         <RatingPage

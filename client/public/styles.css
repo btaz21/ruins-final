@@ -1151,7 +1151,6 @@ input[type=submit] {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1.5fr 1fr;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   justify-content: center;
@@ -1170,6 +1169,8 @@ input[type=submit] {
 
 .grid-image {
   width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .grid-hover-info {
@@ -1466,6 +1467,22 @@ input[type=submit] {
   border: 5px single black;
   border-radius: 10px;
   text-align: center;
+  position: relative;
+}
+
+.comments-bar {
+  padding: 15px;
+}
+
+.comments-bar h3 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
 }
 
 .comments textarea {
