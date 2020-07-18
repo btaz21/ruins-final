@@ -9,7 +9,7 @@ router.post('/', (req, res) => {
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     if (foundUser === null) {
         res.json({
-          message: "User not found"
+          required: "Username or password invalid"
       })
     } else {
       const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password)
@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
         res.json(req.session.user)
       } else {
         res.json({
-          message: "no go"
+          required:"Username or password invalid"
         })
       }
     }

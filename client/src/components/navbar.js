@@ -42,8 +42,6 @@ export default class Navbar extends Component {
           this.setState({errorMessage: response.data.errors.username.properties.message})
         } else if (response.data.required) {
           this.setState({errorMessage: response.data.required})
-        } else if (response.data.minlength){
-          this.setState({errorMessage: response.data.minlength})
         } else {
           this.setState({
             loginOpen: false
@@ -85,7 +83,7 @@ export default class Navbar extends Component {
             loginOpen: false
           })
         } else {
-          console.log('nope');
+          this.setState({errorMessage: response.data.required})
         }
       }
     )
@@ -116,7 +114,7 @@ export default class Navbar extends Component {
 
         {this.state.loginOpen &&
         <div id="nav-user" className={this.state.loginClass}>
-        {this.state.errorMessage}
+        <h6>{this.state.errorMessage}</h6>
         {!this.state.isLoggedIn && <Signup createUser={this.createUser}/> }
         {!this.state.isLoggedIn &&  <Login signIn={this.signIn}/> }
         {this.state.isLoggedIn &&  <Logout logout={this.logout}/> }

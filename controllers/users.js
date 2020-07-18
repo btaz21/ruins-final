@@ -8,7 +8,9 @@ router.post('/', (req, res) => {
   if (req.body.password.length === 0) {
     res.json({required:"Password required"})
   } else if (req.body.password.length < 6) {
-    res.json({minlength:"Password must be at least 6 characters"})
+    res.json({required:"Password must be at least 6 characters"})
+  } else if (req.body.username.length === 0){
+    res.json({required:"Username required"})
   } else {
     const salt = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
     req.body.password = salt

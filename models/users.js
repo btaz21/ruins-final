@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
     required: [true, "Username required"],
     unique: [true, "Username taken"],
     trim: true,
-    minlength: [5, "Username must be at least 5 characters"]
   },
   password: {
     type: String,

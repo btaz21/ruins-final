@@ -878,6 +878,14 @@ input, textarea, button {
   z-index: 5;
 }
 
+#nav-user h6 {
+  color: #783333;
+  margin: 0;
+  text-align: center;
+  font-size: 1.1em;
+  font-family: "Lato", sans-serif;
+}
+
 #nav-user form {
   text-align: center;
 }
