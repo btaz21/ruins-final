@@ -57,7 +57,7 @@ $lightblue: #367890;
 
 //MAIN
 * {
-  border: 1px solid gold;
+  // border: 1px solid gold;
 }
 
 body {
@@ -81,7 +81,8 @@ input, textarea, button {
 // NAVBAR
 .logo {
   font-family: $mainFont;
-  margin: 10px 15px;
+  margin-left: 20px;
+  margin-top: 15px;
   font-size: 1.1em;
   display: flex;
   flex-direction: column;
@@ -103,7 +104,7 @@ input, textarea, button {
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 
 
@@ -111,6 +112,7 @@ input, textarea, button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: 20px;
 }
 
 .nav-list img {
@@ -456,7 +458,7 @@ input[type=submit] {
   grid-row-gap: 20px;
   grid-column-gap: 20px;
   justify-content: center;
-  padding: 20px;
+  margin: 0 10px;
 }
 
 .grid-nav-container {
@@ -899,8 +901,7 @@ input[type=submit] {
 .sorting {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin: auto;
+  margin: 20px auto;
   font-family: $mainFont;
 }
 

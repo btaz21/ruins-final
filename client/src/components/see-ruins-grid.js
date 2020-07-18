@@ -26,7 +26,7 @@ export default class SeeRuinsGrid extends Component {
     )
   }
   addLike = (event) => {
-    axios.put("/api/likes/" + event.target.id).then(
+    axios.put("/api/ruins/likes/" + event.target.id).then(
       (response) => {
         this.setState({ruins: response.data})
       }

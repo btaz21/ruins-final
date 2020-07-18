@@ -99,7 +99,7 @@ export default class Navbar extends Component {
     return (
       <div className="navbar">
 
-        <Link to="/" style={{ textDecoration: 'none' }}>
+        <Link to="/" style={{ textDecoration: 'none', margin: "0", padding: "0" }}>
           <div className="link logo">
             <h1>Ruinfindr</h1>
             <img alt="logo" src="../../images/rocks3.png"/>
