@@ -37,9 +37,9 @@ const usersController = require('./controllers/users.js');
 const sessionsController = require('./controllers/sessions.js');
 
 
-app.use('/ruins', ruinsController);
-app.use('/users', usersController);
-app.use('/sessions', sessionsController)
+app.use('/api/ruins', ruinsController);
+app.use('/api/users', usersController);
+app.use('/api/sessions', sessionsController)
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
