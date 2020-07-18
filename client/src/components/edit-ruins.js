@@ -79,7 +79,7 @@ export default class EditRuins extends Component {
       (response) => {
         // console.log(this.props.location);
         // console.log(window.location);
-        window.location = window.location.href
+        window.location = "https://ruinfindr.herokuapp.com" + this.props.location.pathname
       }
     )
   }
