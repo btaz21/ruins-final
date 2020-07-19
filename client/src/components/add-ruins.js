@@ -23,7 +23,8 @@ class AddRuins extends Component {
     lng: null,
     errorMessage: null,
     ruins: [],
-    errorFiles: null
+    errorFiles: null,
+    uploadSuccess: null
   }
 
   componentDidMount = () => {
@@ -79,7 +80,8 @@ class AddRuins extends Component {
       }
       this.setState({
         image: filesArray,
-        errorFiles: null
+        errorFiles: null,
+        uploadSuccess: "✔"
       })
     }
   }

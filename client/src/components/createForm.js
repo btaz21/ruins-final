@@ -37,7 +37,7 @@ export default class CreateForm extends Component {
           <span
           aria-label="camera"
           role="img">Upload Images 📷
-          </span><span>{this.props.state.errorFiles}</span>
+          </span><span>{this.props.state.errorFiles}</span><span>{this.props.state.uploadSuccess}</span>
           </label>
         </div>
 
