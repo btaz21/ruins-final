@@ -115,7 +115,7 @@ class AddRuins extends Component {
 
   render = () => {
     return (
-      <div>
+      <>
         <Navbar />
         <div className="create-container">
           <Compass state={this.state} />
@@ -134,7 +134,7 @@ class AddRuins extends Component {
             />
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }

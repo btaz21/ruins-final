@@ -1,186 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
-.item-4 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-7 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-8 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-12 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-14 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-16 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-20 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-21 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-24 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-28 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-32 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-35 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-36 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-40 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-42 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-44 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-48 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-49 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-52 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-56 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-60 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-63 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-64 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-68 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-70 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-72 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-76 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-77 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-80 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-84 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-88 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-91 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-92 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-96 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.item-98 {
-  grid-column-start: 2;
-  grid-column-end: 4;
-}
-
-.item-100 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
 .item-1:hover {
   background-color: rgba(54, 120, 144, 0.7);
   transition: 0.6s background-color;
@@ -781,9 +601,10 @@
   border: 1px solid black;
 }
 
-body {
+body, html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .link {
@@ -799,6 +620,29 @@ input, textarea, button {
   appearance: none;
 }
 
+#root {
+  margin: 0;
+  padding: 0;
+}
+
+.fa-icons {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.all-icons {
+  display: flex;
+}
+
+.anchor {
+  text-decoration: none;
+  align-self: center;
+  color: black;
+}
+
 .logo {
   font-family: "IM Fell Double Pica SC", serif;
   margin-left: 20px;
@@ -809,14 +653,15 @@ input, textarea, button {
 }
 
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   padding: 10px;
   align-self: center;
 }
 
 .logo h1 {
   margin: 0;
+  font-size: 1.5em;
 }
 
 .navbar {
@@ -976,7 +821,7 @@ input, textarea, button {
 }
 
 .create-container {
-  padding: 20px 0;
+  background: whitesmoke;
 }
 
 .coordinates-button {
@@ -1004,7 +849,6 @@ input, textarea, button {
   background: whitesmoke;
   background-image: url(https://i.imgur.com/DXohfqq.jpg);
   background-size: cover;
-  border-radius: 10px;
 }
 
 #lat {
@@ -1013,7 +857,6 @@ input, textarea, button {
   font-size: 1.7em;
   background: black;
   margin-bottom: 10px;
-  border-radius: 10px 10px 0 0;
 }
 
 #lng {
@@ -1022,7 +865,6 @@ input, textarea, button {
   font-size: 1.7em;
   background: black;
   margin-top: 10px;
-  border-radius: 0px 0px 10px 10px;
 }
 
 .compass {
@@ -1108,15 +950,12 @@ input, textarea, button {
 
 .file-input label {
   color: white;
-  display: inline-block;
+  display: flex;
   cursor: pointer;
   background: black;
-  border-radius: 10px;
 }
 
 .file-input span {
-  padding: 0 5px;
-  border-radius: 5px;
   margin-left: 10px;
 }
 
@@ -1126,11 +965,13 @@ input, textarea, button {
   text-align: center;
 }
 
-#errorFiles {
-  color: #783333;
-  background: black;
-  font-size: 0.8em;
-  margin-left: 30px;
+.file-input h5 {
+  color: goldenrod;
+  font-size: 0.6em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }
 
 input[type=submit] {
@@ -1151,10 +992,9 @@ input[type=submit] {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
-  justify-content: center;
   margin: 0 10px;
 }
 
@@ -1174,7 +1014,7 @@ input[type=submit] {
 }
 
 .grid-image {
-  width: 100%;
+  max-width: 100%;
   max-height: 400px;
   object-fit: cover;
 }
@@ -1656,6 +1496,204 @@ input[type=submit] {
 
   .more-images-container {
     margin-top: 50px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 400px 1fr;
+    justify-content: center;
+  }
+
+  .create-container {
+    width: 55%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 0;
+    border-radius: 10px;
+    background: whitesmoke;
+  }
+
+  #lng {
+    border-radius: 0;
+  }
+
+  .item-4 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-7 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-8 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-12 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-14 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-16 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-20 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-21 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-24 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-28 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-32 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-35 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-36 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-40 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-42 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-44 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-48 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-49 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-52 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-56 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-60 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-63 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-64 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-68 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-70 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-72 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-76 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-77 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-80 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-84 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-88 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-91 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-92 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-96 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .item-98 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .item-100 {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 
