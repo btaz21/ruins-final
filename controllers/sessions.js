@@ -8,19 +8,14 @@ require('dotenv').config();
 router.post('/', (req, res) => {
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     if (foundUser === null) {
-        res.json({
-          required: "Username or password invalid"
-      })
+        res.json({required: "Username or password invalid"})
     } else {
       const doesPasswordMatch = bcrypt.compareSync(req.body.password, foundUser.password)
       if (doesPasswordMatch) {
         req.session.user = foundUser
-        console.log(req.session.user);
         res.json(req.session.user)
       } else {
-        res.json({
-          required:"Username or password invalid"
-        })
+        res.json({required:"Username or password invalid"})
       }
     }
   })
@@ -28,7 +23,6 @@ router.post('/', (req, res) => {
 
 
 router.get('/', (req, res) => {
-  console.log(req.session.user);
   res.json(req.session.user)
 })
 

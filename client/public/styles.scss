@@ -2,41 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 
-//VARIABLES
-$dark-red: #782020;
+//FONTS
 $mainFont: 'IM Fell Double Pica SC', serif;
 $secondaryFont: 'Lato', sans-serif;
 
-$logo-bg: #8DD1DC;
-$green: #7aa296;
+//VARIABLES
 $rows: 100;
-$green: #203F3C;
-$lightgreen: #659D5D;
-//RUINS-APP COLOR PALETTE
+
+//COLOR PALETTE
 $orange: #945741;
 $brown: #894730;
 $red: #783333;
 $darkblue: #394981;
 $lightblue: #367890;
+$logo-bg: #8DD1DC;
+$green: #7aa296;
+$green: #203F3C;
+$lightgreen: #659D5D;
+$dark-red: #782020;
+$yellow: rgb(218,165,32);
 
-//ITERATOR TO GET GRID TO UPDATE DYNAMICALLY
-@for $i from 1 through $rows {
-  @if $i % 4 == 0 {
-    .item-#{$i} {
-      grid-column-start: 1;
-      grid-column-end: 3;
-    }
-  } @else if $i % 7 == 0 {
-      .item-#{$i} {
-        grid-column-start: 2;
-        grid-column-end: 4;
-    }
-  } @else {
-    .item-#{$i} {
-      //
-    }
-  }
-}
 
 //PROGRAM BACKGROUND COLOR OF GRID ITEMS ON HOVER
 @for $i from 1 through $rows {
@@ -60,9 +45,10 @@ $lightblue: #367890;
   // border: 1px solid gold;
 }
 
-body {
+body, html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .link {
@@ -77,8 +63,33 @@ input, textarea, button {
    appearance: none;
 }
 
+#root {
+  margin:0;
+  padding: 0;
+}
+
 
 // NAVBAR
+
+.fa-icons {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  // background: rgba(54,120,144,.7);
+}
+
+.all-icons {
+  display: flex;
+}
+
+.anchor {
+  text-decoration: none;
+  align-self: center;
+  color: black;
+}
+
 .logo {
   font-family: $mainFont;
   margin-left: 20px;
@@ -90,8 +101,8 @@ input, textarea, button {
 
 
 .logo img {
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   padding: 10px;
   align-self: center;
 }
@@ -99,6 +110,7 @@ input, textarea, button {
 
 .logo h1 {
   margin: 0;
+  font-size: 1.5em;
 }
 
 .navbar {
@@ -264,7 +276,8 @@ input, textarea, button {
 
 // CREATE PAGE
 .create-container {
-  padding: 20px 0;
+  // padding: 20px 0;
+  background: whitesmoke;
 }
 
 .coordinates-button {
@@ -290,10 +303,9 @@ input, textarea, button {
   width: 100%;
   margin: 0 auto;
   background: whitesmoke;
-  // border-radius: 15px;
   background-image: url(https://i.imgur.com/DXohfqq.jpg);
   background-size: cover;
-  border-radius: 10px;
+  // border-radius: 10px;
 
 }
 
@@ -304,7 +316,7 @@ input, textarea, button {
   font-size: 1.7em;
   background: black;
   margin-bottom: 10px;
-  border-radius: 10px 10px 0 0;
+  // border-radius: 10px 10px 0 0;
 
 }
 
@@ -314,7 +326,7 @@ input, textarea, button {
   font-size: 1.7em;
   background: black;
   margin-top: 10px;
-  border-radius: 0px 0px 10px 10px;
+  // border-radius: 0px 0px 10px 10px;
 }
 
 
@@ -406,17 +418,15 @@ input, textarea, button {
 
 .file-input label {
   color: white;
-  display: inline-block;
+  display: flex;
   cursor: pointer;
   background: black;
-  border-radius: 10px;
 }
 
 .file-input span {
-  padding: 0 5px;
-  border-radius: 5px;
   margin-left: 10px;
 }
+
 
 .error {
   margin-bottom: 15px;
@@ -424,11 +434,13 @@ input, textarea, button {
   text-align: center;
 }
 
-#errorFiles {
-  color: $red;
-  background: black;
-  font-size: .8em;
-  margin-left: 30px;
+.file-input h5 {
+  color: $yellow;
+  font-size: .6em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
 }
 
 
@@ -453,11 +465,10 @@ input[type=submit] {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  // grid-template-rows: 200px 300px 250px;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
-  justify-content: center;
+  // justify-content: center;
   margin: 0 10px;
 }
 
@@ -477,7 +488,7 @@ input[type=submit] {
 }
 
 .grid-image {
-  width: 100%;
+  max-width: 100%;
   max-height: 400px;
   // max-width: 400px;
   object-fit: cover;
@@ -987,6 +998,44 @@ input[type=submit] {
 
   .more-images-container {
     margin-top: 50px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr 400px 1fr ;
+    justify-content: center;
+  }
+
+  .create-container {
+    width: 55%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 0;
+    border-radius: 10px;
+    background: whitesmoke;
+  }
+
+  #lng {
+    border-radius: 0;
+  }
+
+
+  //ITERATOR TO GET GRID TO UPDATE DYNAMICALLY
+  @for $i from 1 through $rows {
+    @if $i % 4 == 0 {
+      .item-#{$i} {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+    } @else if $i % 7 == 0 {
+        .item-#{$i} {
+          grid-column-start: 2;
+          grid-column-end: 4;
+      }
+    } @else {
+      .item-#{$i} {
+        //
+      }
+    }
   }
 
 }

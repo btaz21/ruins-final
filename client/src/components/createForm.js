@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Autocomplete from 'react-google-autocomplete';
+import { AiOutlineCamera } from 'react-icons/ai'
 
 
 export default class CreateForm extends Component {
@@ -29,16 +30,12 @@ export default class CreateForm extends Component {
 
         <div className="file-input">
           <label>
-          <input
-            onChange={this.props.processImage}
-            type="file"
-            accept="image/*"
-            multiple/>
-          <span
-          aria-label="camera"
-          role="img">Upload Images 📷
-          </span><span>{this.props.state.errorFiles}</span><span>{this.props.state.uploadSuccess}</span>
+          <input onChange={this.props.processImage} type="file" accept="image/*" multiple/>
+          <h4>Upload Images</h4>
+           <AiOutlineCamera size="1.15em"/>
           </label>
+          {this.props.state.errorFiles && <h5>{this.props.state.errorFiles}</h5>}
+          {this.props.state.uploadSuccess && <h5>{this.props.state.uploadSuccess}</h5>}
         </div>
 
         <div onClick={this.toggleName}>
