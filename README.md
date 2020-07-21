@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## About:
 
 [Ruinfindr](https://ruinfindr.herokuapp.com/)
-Out on your morning constitutional and stumbled across an unmarked ruin? Set your coordinates, upload some photos, and voilà. This app will help you keep track of all your favorite ruins as well as find new ones submitted by other users. All added ruins are integrated with google maps so that you can see them populated as markers.  
+Out on your morning constitutional and stumbled across an unmarked ruin? Set your coordinates, upload some photos, and voilà. This app will help you keep track of all your favorite ruins as well as find new ones submitted by other users. All added ruins are integrated with google maps so that you can see them on the map as they're added.  
 
 ## Features:
 The user can:
