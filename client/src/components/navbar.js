@@ -121,8 +121,8 @@ export default class Navbar extends Component {
 
         <div className="all-icons">
           <Link className="anchor" to={{pathname: "/", state: this.state }}><FaMapMarkedAlt size="2em" className="fa-icons" /></Link>
-          <Link className="anchor" to={{pathname: "/addruin", state: this.state }}><FaMapPin size="2em" className="fa-icons"/></Link>
-          <Link className="anchor" to="/ruinsgrid"><GiAncientRuins size="2em" className="fa-icons"/></Link>
+          {this.state.isLoggedIn && <Link className="anchor" to={{pathname: "/addruin", state: this.state }}><FaMapPin size="2em" className="fa-icons"/></Link> }
+          {this.state.isLoggedIn && <Link className="anchor" to="/ruinsgrid"><GiAncientRuins size="2em" className="fa-icons"/></Link> }
           <FiLogIn onClick={this.toggleLogin} size="2em" className="anchor fa-icons"/>
         </div>
 
