@@ -1,68 +1,73 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Ruinfindr
 
-In the project directory, you can run:
+![Login Page](https://i.imgur.com/wdkqCI4.png "Login Page")
 
-### `npm start`
+## About:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[Ruinfindr](https://ruinfindr.herokuapp.com/) Out on your morning constitutional and stumbled across an unmarked ruin? Set your coordinates, upload some photos, and voila. This app will help you keep track of all your favorite ruins as well as find new ones from other users.  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features:
+The user can:
+- Set coordinates in order to get a more precise location on a ruin.
+- Add ruins, like ruins, add reviews, ratings, etc
+- See all user added ruins on a world map
+- Search for ruins
 
-### `npm test`
+## The Build:
+### Core tech:
+- Javascript/HTML5/CSS3
+- ReactJS
+- MongoDB/Mongoose
+- Node.js
+- Express
+### Other Tech:
+- Google Maps API
+- S3FileUpload
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Timeline:
+| Day           | Tasks         |
+| ------------- |:-------------:|
+| Thurs 6/18    | Set up CRA, set up backend, created some sketches of design, came up with a schema/model |
+| Sat 6/20      | Got geolocation to work, started on frontend  |
+| Sun 6/21      | Completed park restful routes, Started CSS Styling      |
+| Mon 6/22      | CSS work, bug fixes, started README     |
+| Tues 6/23     | We originally planned to add some final features, but had to fix some major bugs instead.      |
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Want to make your own improvements?
+- Visit [Github](https://github.com/btaz21/ruins-final)
+- Clone the repo
+- Open the project in terminal and your text editor of choice
+- Run ```npm install```
+- Run ```mongod```
+- In new terminal tab run ```nodemon```
+- Get to coding!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## :sweat: Features:
+```Javascript
+router.put('/:id/:index', (req, res) => {
+  console.log(req.body);
+  Park.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedPark) => {
+    User.findById(req.session.user._id, (error, foundUser) => {
+      foundUser.parks.splice(req.params.index, 1, updatedPark)
+      foundUser.save((error, data) => {
+        res.json(data)
+        })
+      })
+    })
+  })
+  ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Roadmap:
+- Integrating user schema with the ruins schema. The schema has already been created, just needs to be integrated with the frontend.
+- Allow users to have their own accounts where they can see the ruins they've added, edit them, delete them, etc
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## :blue_book: Sources:
+- Info about the national parks for our admin account  
+[Wikipedia](https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States)

@@ -15,7 +15,6 @@ export default class Navbar extends Component {
     loginOpen: false,
     loginClass: "",
     errorMessage: null,
-    hello: false
   }
   componentDidMount = () => {
     axios.get(
@@ -109,15 +108,6 @@ export default class Navbar extends Component {
             <img alt="logo" src="../../images/rocks3.png"/>
           </div>
         </Link>
-
-        {this.state.hello &&
-        <div className="nav-list">
-          <Link className="link nav-icons" to={{pathname: "/", state: this.state }}><img alt="" id="map" src="../../images/015.svg"/></Link>
-          {this.state.isLoggedIn && <Link className="link nav-icons" to={{pathname: "/addruin", state: this.state }}><img alt="" id="pin" src="../../images/143.svg"/></Link> }
-          {this.state.isLoggedIn && <Link className="link nav-icons" to="/ruinsgrid"><img alt="" id="see" src="../../images/327.png"/></Link>}
-          <Link className="link nav-icons"><img onClick={this.toggleLogin} alt="signup-icon" id="sign-up" src="../../images/163.svg"/></Link>
-        </div>
-        }
 
         <div className="all-icons">
           <Link className="anchor" to={{pathname: "/", state: this.state }}><FaMapMarkedAlt size="2em" className="fa-icons" /></Link>

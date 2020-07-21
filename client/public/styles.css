@@ -625,6 +625,29 @@ input, textarea, button {
   padding: 0;
 }
 
+.welcome-container {
+  font-family: "IM Fell Double Pica SC", serif;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 0;
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -240px;
+  margin-left: -180px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1;
+  background: whitesmoke;
+}
+
 .fa-icons {
   border: 1px solid black;
   border-radius: 15px;

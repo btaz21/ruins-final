@@ -69,6 +69,31 @@ input, textarea, button {
 }
 
 
+// WELCOME
+.welcome-container {
+  font-family: $mainFont;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,1);
+  z-index: 0;
+}
+
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -240px;
+  margin-left: -180px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  z-index: 1;
+  background: whitesmoke;
+}
+
 // NAVBAR
 
 .fa-icons {
