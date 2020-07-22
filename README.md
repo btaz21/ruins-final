@@ -70,8 +70,8 @@ The user can:
 
 
 ## Sources:
-(https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6)
-(https://css-tricks.com/star-ratings/)
-(https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form)
-(https://www.freecodecamp.org/news/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5/)
-(https://github.com/expressjs/session/issues/464)
+[1](https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6)
+[2](https://css-tricks.com/star-ratings/)
+[3](https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form)
+[4](https://www.freecodecamp.org/news/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5/)
+[5](https://github.com/expressjs/session/issues/464) 
