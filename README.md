@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## About:
 
-[Ruinfindr](https://ruinfindr.herokuapp.com/) 
+[Ruinfindr](https://ruinfindr.herokuapp.com/)
 Out on your morning constitutional and stumbled across an unmarked ruin? Set your coordinates, upload some photos, and get on your way. This app will help you keep track of all your favorite ruins as well as find new ones submitted by other users. All ruins are integrated with google maps so that you can see them on the map after they're added.  
 
 I wanted to make the app accessible and not so heavily gated with mandatory registration and the extra steps to login/logout. My thinking was that the like functionality in the ruins grid would bring the most interesting additions to the top. That being said, all that functionality is still there under the hood with user schemas, session-based authentication, and front-end forms already coded out. The potential to gate some parts of the app would take just a a few small changes to the code. Some additional functionality could be added by integrating the ruins schema with the users.
@@ -70,7 +70,6 @@ The user can:
 
 
 ## Sources:
-(https://en.wikipedia.org/wiki/List_of_national_parks_of_the_United_States)
 (https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6)
 (https://css-tricks.com/star-ratings/)
 (https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form)
