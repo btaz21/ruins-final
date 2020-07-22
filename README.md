@@ -17,7 +17,7 @@ The user can:
 - Search for ruins
 
 
-- Attempted to get the grid to change dynamically based on number of elements in array and using Sass rather than through ReactJS. The only problem is that I don't really have access to the array in my sass file, so I created an arbitrary number for now. Maybe in some future iteration Sass will be able to communicate with other files via ES6 import/export modules?
+- Attempted to get the grid to change dynamically based on number of elements in array and using Sass rather than through ReactJS. The only problem is that I don't really have access to the array in my sass file, so I created an arbitrary number for now. Maybe in some future iteration Sass will be able to communicate with other files via ES6 import/export modules? Note: originally I was changing the grid area but took it out for now.
 
 ```Javascript
 @for $i from 1 through $rows {
@@ -67,11 +67,14 @@ The user can:
 - Integrating user schema with the ruins schema. The schema has already been created, just needs to be integrated with the frontend.
 - Allow users to have their own accounts where they can see the ruins they've added, edit them, delete them, etc
 - Make it possible to add pins to the map and fetch the lat/lng from the map itself.
-
+- The "see other ruins" section should allow you to click on the image and redirect to that page
+- I would like to see the image upload give some sort of indication that the file was uploaded. Might require taking out the S3 file upload package, coding out the post request manually, and then using async/await.
 
 ## Sources:
-[1](https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6)
-[2](https://css-tricks.com/star-ratings/)
-[3](https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/ https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form)
-[4](https://www.freecodecamp.org/news/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5/)
-[5](https://github.com/expressjs/session/issues/464) 
+- How to create horizontal scrolling containers[1](https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6)
+- This helped me create the star ratings using just the unicode star and very little code [2](https://css-tricks.com/star-ratings/)
+- How to style file inputs [3](https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/)
+- How to pass props through react router / link component [4](https://stackoverflow.com/questions/42060961/react-router-v4-link-for-form)
+- Using spread operators in ReactJS [5](https://www.freecodecamp.org/news/handling-state-in-react-four-immutable-approaches-to-consider-d1f5c00249d5/)
+- CORS issues and getting cookies to work with express sessions in a CRA [6](https://github.com/expressjs/session/issues/464)
+- Getting express to do double duty with API calls and server backend in CRA [7](https://daveceddia.com/deploy-react-express-app-heroku/)
