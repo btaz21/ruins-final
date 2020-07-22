@@ -7,6 +7,7 @@ import axios from 'axios';
 import { FaMapMarkedAlt, FaMapPin, FaColumns } from 'react-icons/fa';
 import { FiLogIn } from 'react-icons/fi';
 import { GiAncientRuins } from 'react-icons/gi'
+import HomePage from './homepage.js'
 
 
 export default class Navbar extends Component {
@@ -15,6 +16,7 @@ export default class Navbar extends Component {
     loginOpen: false,
     loginClass: "",
     errorMessage: null,
+    welcomeMod: false
   }
   componentDidMount = () => {
     axios.get(

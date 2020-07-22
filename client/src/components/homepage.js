@@ -9,9 +9,7 @@ export default class HomePage extends Component {
         <div className="welcome-container">
           <div className="welcome">
             <h1>Ruinfindr</h1>
-            <div className="register">
-              <Link to="/"><h2>Enter</h2></Link>
-            </div>
+            <button onClick={this.props.toggleLogin}>Sign up</button>
             <GiAncientRuins size={"20em"}/>
           </div>
         </div>

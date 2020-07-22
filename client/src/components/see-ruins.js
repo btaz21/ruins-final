@@ -3,6 +3,7 @@ import { Map, InfoWindow, GoogleApiWrapper, Marker } from 'google-maps-react';
 import mapStyles from "./mapStyles.js";
 import axios from 'axios';
 import Navbar from "./navbar.js";
+import HomePage from "./homepage.js"
 
 
 
@@ -13,7 +14,8 @@ export class SeeRuins extends Component {
     ruins: [],
     selectedPlace: {},
     activeMarker: {},
-    showInfoWindow: false
+    showInfoWindow: false,
+    welcomeModule: true
   }
 
   componentDidMount = () => {
@@ -47,13 +49,11 @@ export class SeeRuins extends Component {
       activeMarker: null
     })
   }
-
   render = () => {
     return (
 
       <div>
         <Navbar />
-
         <Map
           google={this.props.google}
           zoom={5}
